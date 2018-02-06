@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/usr/src/app/src
+    command: ["yarn", "start"]
+    networks:
+      - app-network
+networks:
+  app-network:
+
+
