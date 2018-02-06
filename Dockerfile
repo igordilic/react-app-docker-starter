@@ -6,7 +6,7 @@ ENV APP_DIR=/usr/src/app PORT=3000
 RUN mkdir -p ${APP_DIR}
 WORKDIR ${APP_DIR}
 # copy mandatory files for setup
-COPY ["./package.json", "./"]
+COPY ["./package.json", "./yarn.lock", "./"]
 # install node_modules
 RUN ["yarn", "install"]
 # copy src

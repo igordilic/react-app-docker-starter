@@ -1,2 +1,2 @@
-This is wrapper around create-react-app. It should work inside docker image to ensure the same environments for every developer.
+This is a wrapper around create-react-app. It should work inside a docker image to ensure the same environments for every developer.
 Usage: `docker-compose up` then point your browser to `localhost:3000`. No need to local install of node modules.
