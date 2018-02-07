@@ -1,5 +1,9 @@
 {
-  "name": "football-arrests",
+  "name": "creat-react-app-docker",
+  "author": {
+    "name": "Igor Ilic",
+    "email": "ilicigor@gmail.com"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
