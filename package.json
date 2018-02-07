@@ -1,5 +1,6 @@
 {
   "name": "creat-react-app-docker",
+  "license": "MIT",
   "author": {
     "name": "Igor Ilic",
     "email": "ilicigor@gmail.com"
