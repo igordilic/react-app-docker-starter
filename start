@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Start react app in a docker image
+#
+# Copyright (c) 2018 Igor Ilic
+
+case "$1" in
+  dev)
+    # firing up dev environment
+    docker-compose down
+    if [[ $? != 0 ]]; then
+      exit $?
+    fi
+    docker-compose build
+    if [[ $? != 0 ]]; then
+      exit $?
+    fi
+    docker-compose up
+    ;;
+  prod)
+    # firing up prod environment
+    docker-compose down
+    if [[ $? != 0 ]]; then
+      exit $?
+    fi
+    docker-compose -f docker-compose.prod.yml build
+    if [[ $? != 0 ]]; then
+      exit $?
+    fi
+    docker-compose -f docker-compose.prod.yml up
+    ;;
+  down)
+    docker-compose "$@"
+    ;;
+  *)
+    echo "Usage: start {dev|prod|down}" >&2
+    exit 1
+    ;;
+esac
+
+exit $?

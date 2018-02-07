@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile.prod
+    ports:
+      - 8080:8080
+    environment:
+      - NODE_ENV=production
+    command: ["nginx", "-g", "daemon off;"]
+    networks:
+      - app-network
+networks:
+  app-network:

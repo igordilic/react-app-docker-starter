@@ -1,2 +1,5 @@
 This is a wrapper around create-react-app. It should work inside a docker image to ensure the same environments for every developer.
-Usage: `docker-compose up` then point your browser to `localhost:3000`. No need to local install of node modules.
+Usage:
+- dev mode: `./start dev` and point your browser to `localhost:3000`
+- prod mode (production build): `./start prod` and point your browser to `localhost:8080`
+- bring services down: `./start down`

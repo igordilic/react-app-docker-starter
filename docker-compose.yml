@@ -1,9 +1,9 @@
-version: '3.2'
+version: '3.4'
 services:
   app:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/Dockerfile
     environment:
       - NODE_ENV=development
     ports:
